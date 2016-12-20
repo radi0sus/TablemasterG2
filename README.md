@@ -1,6 +1,6 @@
-# Tablemaster2G
+# TablemasterG2
 
-`Tablemaster2G` generates (nice) "experimental data" tables from SHELXL generated CIFs (Crystallographic Information File).
+`TablemasterG2` generates (nice) "experimental data" tables from SHELXL generated CIFs (Crystallographic Information File).
 The program is written in PureBasic.
 
 ## Use is simple:
@@ -30,11 +30,11 @@ The program is written in PureBasic.
 
 ## Limitations
 
-* `Tablemaster2G` can handle SHELXL generated CIFs only (starting from SHELXL-97).
+* `TablemasterG2` can handle SHELXL generated CIFs only (starting from SHELXL-97).
 
 * The CIF should be free of errors, otherwise outputs will be senseless or the program will crash.
 
-* If the space group is not given in the way `Tablemaster2G` can handle it, the space group will be replaced by `?`. Recent SHELXL versions insert the space group automatically. The format is recognized by the program. 
+* If the space group is not given in the way `TablemasterG2` can handle it, the space group will be replaced by `?`. Recent SHELXL versions insert the space group automatically. The format is recognized by the program. 
 
 * Tables can exceed the size of a A4 page in the LaTeX output. In this case you have to reduce the number of columns, change the page orientation or use the `tabularx` environment (has to be inserted manually in the `.tex` file). 
 
@@ -42,7 +42,7 @@ The program is written in PureBasic.
 
 ## Compilation
 
-* `Tablemaster2G.pb`, `help.txt`, `license.txt` should be in the same folder. 
+* `TablemasterG2.pb`, `help.txt`, `license.txt` should be in the same folder. 
 
 * Open `Tablemaster2G.pb` with PureBasic. 
 
