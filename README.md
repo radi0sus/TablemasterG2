@@ -44,7 +44,7 @@ The program is written in PureBasic.
 
 * `TablemasterG2.pb`, `help.txt`, `license.txt` should be in the same folder. 
 
-* Open `Tablemaster2G.pb` with PureBasic. 
+* Open `TablemasterG2.pb` with PureBasic. 
 
 * Choose `Create Executable...` in the `Compiler` menu.
 
@@ -81,5 +81,3 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-
