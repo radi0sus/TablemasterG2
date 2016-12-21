@@ -13,8 +13,7 @@ Runtime Enumeration Window
   #About_Window
 EndEnumeration
 
-
-Runtime Enumeration	Gadget_Main
+Runtime Enumeration	Gadget
   #Load_CIF1
   #Load_CIF2
   #Load_CIF3
@@ -164,7 +163,7 @@ XML.s =  "<dialogs>" +
          "            <option id='#A4_Landscape'       text='A4 Landscape'           onevent='A4_Orientation()'/>" +
          "          </hbox>" +
          "         </frame>" +
-         "         <frame colspan='5' text='Preview'>" + 
+         "         <frame colspan='5' text='Plain text preview (RTF, LaTeX and Markdown outputs will look different, but contain essentially the same information).'>" + 
          "            <editor id='#Editor' colspan='5' height='150' flags='#PB_Editor_ReadOnly'/>" +
          "         </frame>" +
          "         <frame colspan='5' text='Copy'>" +
@@ -279,6 +278,30 @@ If CatchXML(#Xml, @XML.s, StringByteLength(XML.s), 0, #XmlEncoding) And XMLStatu
     SetGadgetState(#Include_T, #PB_Checkbox_Checked)
     SetGadgetState(#A4_Auto, 1) 
     
+    GadgetToolTip(#Load_CIF1, "open file") 
+    GadgetToolTip(#Load_CIF2, "open file") 
+    GadgetToolTip(#Load_CIF3, "open file") 
+    GadgetToolTip(#Load_CIF4, "open file") 
+    GadgetToolTip(#Load_CIF5, "open file") 
+    GadgetToolTip(#Clear_all, "clear everything") 
+    GadgetToolTip(#Help, "display help window") 
+    GadgetToolTip(#About, "display about window")
+    GadgetToolTip(#Exit, "close the program immediately")
+    GadgetToolTip(#Include_T, "include _diffrn_ambient_temperature") 
+    GadgetToolTip(#Include_Moiety, "include _chemical_formula_moiety") 
+    GadgetToolTip(#SI_Units, "display '/unit' instead of '[unit]'") 
+    GadgetToolTip(#A4_Auto, "switch page orientation") 
+    GadgetToolTip(#A4_Portrait, "switch page orientation") 
+    GadgetToolTip(#A4_Landscape, "switch page orientation") 
+    GadgetToolTip(#Copy_RTF, "copy RTF table to clipboard")
+    GadgetToolTip(#Copy_LaTex, "copy LaTeX table to clipboard")
+    GadgetToolTip(#Copy_MD, "copy Markdown table to clipboard")
+    GadgetToolTip(#Copy_Plain, "copy plain text table to clipboard")
+    GadgetToolTip(#Save_RTF, "save RTF table")
+    GadgetToolTip(#Save_LaTex, "save LaTeX table")
+    GadgetToolTip(#Save_MD, "save Markdown table")
+    GadgetToolTip(#Save_Plain, "save plain text table")
+
     If LoadFont(1, "Consolas", 10)
       SetGadgetFont(#Editor, FontID(1))  
     EndIf
@@ -296,7 +319,6 @@ If CatchXML(#Xml, @XML.s, StringByteLength(XML.s), 0, #XmlEncoding) And XMLStatu
       ElseIf Event = #PB_Event_CloseWindow And EventWindow() = #About_Window
         CloseWindow(#About_Window)
       EndIf
-
     Until Event = #PB_Event_CloseWindow And EventWindow() = #Main_Window
     
   Else  
@@ -518,15 +540,21 @@ Procedure Save_File(Type.s)
     Result=MessageRequester("Warning!", "Overwrite File?", #PB_MessageRequester_YesNo | #PB_MessageRequester_Info)
     CloseFile(0)
   EndIf
-  
   If Result=#PB_MessageRequester_Yes 
     If ListSize(SaveFile.s())
       If Filename.s
         If CreateFile(0, Filename.s) 
-          ForEach SaveFile.s()
-            WriteStringN(0,SaveFile.s())
-          Next
-          CloseFile(0)
+          If Type.s="RTF"
+            ForEach SaveFile.s()
+              WriteStringN(0,SaveFile.s(),#PB_Ascii)
+            Next
+            CloseFile(0)
+          Else
+            ForEach SaveFile.s()
+              WriteStringN(0,SaveFile.s())
+            Next
+            CloseFile(0)
+          EndIf
         Else
           MessageRequester("Error!", "File not found.", #PB_MessageRequester_Ok | #PB_MessageRequester_Error)
         EndIf 
@@ -540,10 +568,17 @@ Procedure Save_File(Type.s)
     If ListSize(SaveFile.s())
       If Filename.s
         If CreateFile(0, Filename.s) 
-          ForEach SaveFile.s()
-            WriteStringN(0,SaveFile.s())
-          Next
-          CloseFile(0)
+          If Type.s="RTF"
+            ForEach SaveFile.s()
+              WriteStringN(0,SaveFile.s(),#PB_Ascii)
+            Next
+            CloseFile(0)
+          Else
+            ForEach SaveFile.s()
+              WriteStringN(0,SaveFile.s())
+            Next
+            CloseFile(0)
+          EndIf
         Else
           MessageRequester("Error!", "File not found.", #PB_MessageRequester_Ok | #PB_MessageRequester_Error)
         EndIf 
