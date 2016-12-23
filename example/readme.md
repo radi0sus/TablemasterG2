@@ -1,6 +1,6 @@
 Example files.
 
-mb118b-final.cif  : sample cif 
+mf118b-final.cif  : sample cif 
 
 table.md          : table in Markdown format
 
