@@ -1,0 +1,31 @@
+Table 1. Crystal data and refinement details for mf118b and mf118b.
+compound                  mf118b                                  mf118b                                          
+empirical formula         C38 H54 Fe2 N12 S2                      C38 H54 Fe2 N12 S2                              
+moiety formula            C22 H14 Fe2 N10 S2 2-, 2(C8 H20 N +)    C22 H14 Fe2 N10 S2 2-, 2(C8 H20 N +)            
+formula weight            854.75                                  854.75                                          
+T [K]                     133(2)                                  133(2)                                          
+crystal size [mm³]        0.500 x 0.500 x 0.360                   0.500 x 0.500 x 0.360                           
+crystal system            monoclinic                              monoclinic                                      
+space group               P21/c (No. 14)                          P21/c (No. 14)                                  
+a [Å]                     11.2144(4)                              11.2144(4)                                      
+b [Å]                     14.4686(4)                              14.4686(4)                                      
+c [Å]                     13.7454(5)                              13.7454(5)                                      
+α [°]                     90                                      90                                              
+β [°]                     113.658(3)                              113.658(3)                                      
+γ [°]                     90                                      90                                              
+V [Å³]                    2042.84(13)                             2042.84(13)                                     
+Z                         2                                       2                                               
+ρ [g·cm⁻³]                1.390                                   1.390                                           
+F(000)                    900                                     900                                             
+µ [mm⁻¹]                  0.857                                   0.857                                           
+Tmin / Tmax               0.6373 / 0.7269                         0.6373 / 0.7269                                 
+θ-range [°]               1.983 - 26.942                          1.983 - 26.942                                  
+hkl-range                 ±14, ±18, ±17                           ±14, ±18, ±17                                   
+measured refl.            26072                                   26072                                           
+unique refl. [Rint]       4445 [0.0317]                           4445 [0.0317]                                   
+obs. refl. (I > 2σ(I))    4191                                    4191                                            
+data / restr. / param.    4445 / 0 / 248                          4445 / 0 / 248                                  
+goodness-of-fit (F²)      1.037                                   1.037                                           
+R1, wR2 (I > 2σ(I))       0.0227 / 0.0599                         0.0227 / 0.0599                                 
+R1, wR2 (all data)        0.0247 / 0.0608                         0.0247 / 0.0608                                 
+res. el. dens. [e·Å⁻³]    -0.360 / 0.310                          -0.360 / 0.310                                  
