@@ -2796,7 +2796,7 @@ Procedure Create_Markdown()
                                                   "TAB3" + CIF_Items_3.s("_exptl_crystal_density_diffrn") +
                                                   "TAB4" + CIF_Items_4.s("_exptl_crystal_density_diffrn") +
                                                   "TAB5" + CIF_Items_5.s("_exptl_crystal_density_diffrn") + "TAB6"
-  AddElement(MD_Ascii.s()) : MD_Ascii.s() = "|*F(000)*" + "TAB1" + CIF_Items_1.s("_exptl_crystal_F_000") + 
+  AddElement(MD_Ascii.s()) : MD_Ascii.s() = "|*F*(000)" + "TAB1" + CIF_Items_1.s("_exptl_crystal_F_000") + 
                                                   "TAB2" + CIF_Items_2.s("_exptl_crystal_F_000") +
                                                   "TAB3" + CIF_Items_3.s("_exptl_crystal_F_000") +
                                                   "TAB4" + CIF_Items_4.s("_exptl_crystal_F_000") +
